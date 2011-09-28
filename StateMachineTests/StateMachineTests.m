@@ -33,7 +33,15 @@
 	STAssertTrue([state1_ activateCalled], @"Activate was not called after setting as current state");
 	STAssertFalse([state1_ deactivateCalled], @"Deactivate called while state still active");
 	stateMachine_.currentState = state2_;
-	STAssertTrue([state_ deactivateCalled], @"Deactivate not called after removal from current state");
+	STAssertTrue([state1_ deactivateCalled], @"Deactivate not called after removal from current state");
+}
+
+- (void)testSubstateActivateDeactivateMethod
+{
+	state1_.substate = state2_;
+	STAssertTrue([state2_ activateCalled], @"Substate activate not called");
+	state1_.substate = nil;
+	STAssertTrue([state2_ deactivateCalled], @"Subsatte deactivate not called");
 }
 
 - (void)testCorrectStateMethodCall
@@ -50,7 +58,7 @@
 	STAssertTrue([state1_ bCalled], @"Parent didn't handle message substate didn't implement");
 	
 	//Child state implements method but doesn't handle it, so it passes the message to the parent
-	[stateMachine callC];
+	[stateMachine_ callC];
 	STAssertTrue([state2_ cCalled], @"Substate didn't handle method");
 	STAssertTrue([state1_ cCalled], @"Message not passed to parent");
 }

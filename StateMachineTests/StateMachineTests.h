@@ -8,6 +8,8 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import "StateMachine.h"
+#import "State1.h"
+#import "State2.h"
 
 @interface StateMachineTests : SenTestCase {
 @private
