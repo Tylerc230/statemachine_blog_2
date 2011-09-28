@@ -7,11 +7,13 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-
+#import "StateMachine.h"
 
 @interface StateMachineTests : SenTestCase {
 @private
-    
+	StateMachine * stateMachine_;
+    State1 * state1_;
+	State2 * state2_;
 }
 
 @end

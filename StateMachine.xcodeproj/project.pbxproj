@@ -425,6 +425,7 @@
 				70FCBD4A1432CBEE00D88593 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70FCBD4B1432CBEE00D88593 /* Build configuration list for PBXNativeTarget "StateMachineTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +434,7 @@
 				70FCBD4D1432CBEE00D88593 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
