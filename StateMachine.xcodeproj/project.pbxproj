@@ -37,17 +37,17 @@
 		70FCBD1B1432CBEE00D88593 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		70FCBD1D1432CBEE00D88593 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		70FCBD1F1432CBEE00D88593 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		70FCBD231432CBEE00D88593 /* StateMachine-Info.plist */ = {isa = PBXFileReference; path = "StateMachine-Info.plist"; sourceTree = "<group>"; };
+		70FCBD231432CBEE00D88593 /* StateMachine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StateMachine-Info.plist"; sourceTree = "<group>"; };
 		70FCBD251432CBEE00D88593 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		70FCBD271432CBEE00D88593 /* StateMachine-Prefix.pch */ = {isa = PBXFileReference; path = "StateMachine-Prefix.pch"; sourceTree = "<group>"; };
+		70FCBD271432CBEE00D88593 /* StateMachine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StateMachine-Prefix.pch"; sourceTree = "<group>"; };
 		70FCBD281432CBEE00D88593 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		70FCBD2A1432CBEE00D88593 /* StateMachineAppDelegate.h */ = {isa = PBXFileReference; path = StateMachineAppDelegate.h; sourceTree = "<group>"; };
+		70FCBD2A1432CBEE00D88593 /* StateMachineAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateMachineAppDelegate.h; sourceTree = "<group>"; };
 		70FCBD2B1432CBEE00D88593 /* StateMachineAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateMachineAppDelegate.m; sourceTree = "<group>"; };
 		70FCBD2E1432CBEE00D88593 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		70FCBD351432CBEE00D88593 /* StateMachineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StateMachineTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70FCBD3D1432CBEE00D88593 /* StateMachineTests-Info.plist */ = {isa = PBXFileReference; path = "StateMachineTests-Info.plist"; sourceTree = "<group>"; };
+		70FCBD3D1432CBEE00D88593 /* StateMachineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StateMachineTests-Info.plist"; sourceTree = "<group>"; };
 		70FCBD3F1432CBEE00D88593 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		70FCBD411432CBEE00D88593 /* StateMachineTests-Prefix.pch */ = {isa = PBXFileReference; path = "StateMachineTests-Prefix.pch"; sourceTree = "<group>"; };
+		70FCBD411432CBEE00D88593 /* StateMachineTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StateMachineTests-Prefix.pch"; sourceTree = "<group>"; };
 		70FCBD421432CBEE00D88593 /* StateMachineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateMachineTests.h; sourceTree = "<group>"; };
 		70FCBD441432CBEE00D88593 /* StateMachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateMachineTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
