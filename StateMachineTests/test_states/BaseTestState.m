@@ -11,7 +11,7 @@
 
 @implementation BaseTestState
 @dynamic activateCalled, deactivateCalled;
-@dynamic  aCalled, bCalled, cCalled;
+@dynamic  aCalled, bCalled, cCalled, stateMachineSet;
 - (id)init
 {
 	if (self = [super init]) {
@@ -60,6 +60,11 @@
 - (BOOL)cCalled
 {
 	return [methodsCalled_ containsObject:@"callC"];
+}
+
+- (BOOL)stateMachineSet
+{
+	return self.stateMachine != nil;
 }
 
 @end

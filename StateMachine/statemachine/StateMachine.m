@@ -22,6 +22,7 @@
 	[self.currentState release];
 	
 	currentState_ = [currentState retain];
+	self.currentState.stateMachine = self;
 	[currentState_ activate];
 }
 

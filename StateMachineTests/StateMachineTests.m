@@ -44,16 +44,52 @@
 	STAssertTrue([state2_ deactivateCalled], @"Substate deactivate not called");
 }
 
-- (void)testStateSubstateLifecycleMethods
+#pragma Test Lifecycle (activate/deactive) methods
+
+- (void)lifecycleMethodTest:(NSString *)testName
+{
+	STAssertTrue([state1_ activateCalled], @"Test: %@ Parent state activate should be called", testName);
+	STAssertTrue([state2_ activateCalled], @"Test: %@ Child state activate should be called", testName);
+	stateMachine_.currentState = nil;
+	STAssertTrue([state1_ deactivateCalled], @"Test: %@ Parent state deactivate should be called", testName);
+	STAssertTrue([state2_ deactivateCalled], @"Test: %@ Child state deactivate should be called", testName);
+}
+
+- (void)testPresetLifecycleMethods
 {
 	state1_.substate = state2_;
 	stateMachine_.currentState = state1_;
-	STAssertTrue([state1_ activateCalled], @"Parent state activate should be called");
-	STAssertTrue([state2_ activateCalled], @"Child state activate should be called");
-	stateMachine_.currentState = nil;
-	STAssertTrue([state1_ deactivateCalled], @"Parent state deactivate should be called");
-	STAssertTrue([state2_ deactivateCalled], @"Child state deactivate should be called");
+	[self lifecycleMethodTest:@"Substate first"];
 }
+
+- (void)testPostLifecycleMethods
+{
+	stateMachine_.currentState = state1_;
+	state1_.substate = state2_;
+	[self lifecycleMethodTest:@"Current state first"];
+}
+
+#pragma Test StateMachine assignment
+- (void)stateMachineSetTest:(NSString *)testName
+{
+	STAssertTrue([state1_ stateMachineSet], @"Test: %@ Parent state machine not set", testName);
+	STAssertTrue([state2_ stateMachineSet], @"Test: %@ Chile state machine not set", testName);
+}
+
+- (void)testPreStateMachineSet
+{
+	state1_.substate = state2_;
+	stateMachine_.currentState = state1_;
+	[self stateMachineSetTest:@"Substate first"];
+}
+
+- (void)testPostStateMachineSet
+{
+	stateMachine_.currentState = state1_;
+	state1_.substate = state2_;
+	[self stateMachineSetTest:@"Current state first"];
+}
+
 /* Basic message passing test */
 - (void)testCorrectStateMethodCall
 {

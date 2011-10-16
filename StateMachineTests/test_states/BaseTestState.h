@@ -21,6 +21,7 @@
 @property (nonatomic, readonly) BOOL aCalled;
 @property (nonatomic, readonly) BOOL bCalled;
 @property (nonatomic, readonly) BOOL cCalled;
+@property (nonatomic, readonly) BOOL stateMachineSet;
 
 - (void)callA;
 
