@@ -25,4 +25,9 @@
 	[currentState_ activate];
 }
 
+- (id)forwardingTargetForSelector:(SEL)aSelector
+{
+	return self.currentState;
+}
+
 @end

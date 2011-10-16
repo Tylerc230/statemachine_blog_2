@@ -11,4 +11,9 @@
 
 @implementation State2
 
+- (void)callC
+{
+	METHOD_CALLED
+}
+
 @end

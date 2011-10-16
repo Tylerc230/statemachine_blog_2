@@ -8,6 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import "StateMachine.h"
+#import "BaseTestState.h"
 #import "State1.h"
 #import "State2.h"
 

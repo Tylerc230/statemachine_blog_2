@@ -26,12 +26,18 @@
 
 - (void)activate
 {
-	
+	[self.substate activate];
 }
 
 - (void)deactivate
 {
-	
+	[self.substate deactivate];
 }
+
+- (id)forwardingTargetForSelector:(SEL)aSelector
+{
+	return self.substate;
+}
+
 
 @end

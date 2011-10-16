@@ -41,26 +41,40 @@
 	state1_.substate = state2_;
 	STAssertTrue([state2_ activateCalled], @"Substate activate not called");
 	state1_.substate = nil;
-	STAssertTrue([state2_ deactivateCalled], @"Subsatte deactivate not called");
+	STAssertTrue([state2_ deactivateCalled], @"Substate deactivate not called");
 }
 
+- (void)testStateSubstateLifecycleMethods
+{
+	state1_.substate = state2_;
+	stateMachine_.currentState = state1_;
+	STAssertTrue([state1_ activateCalled], @"Parent state activate should be called");
+	STAssertTrue([state2_ activateCalled], @"Child state activate should be called");
+	stateMachine_.currentState = nil;
+	STAssertTrue([state1_ deactivateCalled], @"Parent state deactivate should be called");
+	STAssertTrue([state2_ deactivateCalled], @"Child state deactivate should be called");
+}
+/* Basic message passing test */
 - (void)testCorrectStateMethodCall
 {
 	state1_.substate = state2_;
 	stateMachine_.currentState = state1_;
-	//Sub state handles callA
-	[stateMachine_ callA];
-	STAssertTrue([state2_ aCalled], @"Substate didn't handle the message first");
-	STAssertFalse([state1_ aCalled], @"Parent class handled method first");
+	//Both state and substate handle the message
+	[stateMachine_ performSelector:@selector(callA)];
+	STAssertFalse([state2_ aCalled], @"Parent state should handle message first. If parent implements method, child implementation should not be called");
+	STAssertTrue([state1_ aCalled], @"Parent state should handle message first. Parent should have handled 'callA'");
 	
-	//Parent state handles callB (sub state doesn't implement callB)
-	[stateMachine_ callB];
+	//Parent state implments callB, child does not
+	[stateMachine_ performSelector:@selector(callB)];
 	STAssertTrue([state1_ bCalled], @"Parent didn't handle message substate didn't implement");
 	
 	//Child state implements method but doesn't handle it, so it passes the message to the parent
-	[stateMachine_ callC];
+	[stateMachine_ performSelector:@selector(callC)];
 	STAssertTrue([state2_ cCalled], @"Substate didn't handle method");
-	STAssertTrue([state1_ cCalled], @"Message not passed to parent");
+	STAssertFalse([state1_ cCalled], @"Parent should not have been passed the callC method");
+	
+	//There is currently a bug preventing try catch block from catching "unrecognized selector sent to instance" exceptions
+	//STAssertThrows([stateMachine_ performSelector:@selector(callD)], @"State machine silently handled method no state implments");
 }
 
 

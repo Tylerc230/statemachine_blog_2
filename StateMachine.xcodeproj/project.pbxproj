@@ -15,6 +15,8 @@
 		70A43BEA1432D63F00D9ECAC /* State1.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BE81432D63F00D9ECAC /* State1.m */; };
 		70A43BED1432D65400D9ECAC /* State2.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BEC1432D65400D9ECAC /* State2.m */; };
 		70A43BEE1432D65400D9ECAC /* State2.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BEC1432D65400D9ECAC /* State2.m */; };
+		70A43BF11432DE0700D9ECAC /* BaseTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BF01432DE0700D9ECAC /* BaseTestState.m */; };
+		70A43BF21432DE0700D9ECAC /* BaseTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BF01432DE0700D9ECAC /* BaseTestState.m */; };
 		70FCBD1C1432CBEE00D88593 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FCBD1B1432CBEE00D88593 /* UIKit.framework */; };
 		70FCBD1E1432CBEE00D88593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FCBD1D1432CBEE00D88593 /* Foundation.framework */; };
 		70FCBD201432CBEE00D88593 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FCBD1F1432CBEE00D88593 /* CoreGraphics.framework */; };
@@ -49,6 +51,8 @@
 		70A43BE81432D63F00D9ECAC /* State1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = State1.m; path = test_states/State1.m; sourceTree = "<group>"; };
 		70A43BEB1432D65400D9ECAC /* State2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = State2.h; path = test_states/State2.h; sourceTree = "<group>"; };
 		70A43BEC1432D65400D9ECAC /* State2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = State2.m; path = test_states/State2.m; sourceTree = "<group>"; };
+		70A43BEF1432DE0700D9ECAC /* BaseTestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTestState.h; path = test_states/BaseTestState.h; sourceTree = "<group>"; };
+		70A43BF01432DE0700D9ECAC /* BaseTestState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTestState.m; path = test_states/BaseTestState.m; sourceTree = "<group>"; };
 		70FCBD171432CBEE00D88593 /* StateMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FCBD1B1432CBEE00D88593 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		70FCBD1D1432CBEE00D88593 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +114,8 @@
 				70A43BE81432D63F00D9ECAC /* State1.m */,
 				70A43BEB1432D65400D9ECAC /* State2.h */,
 				70A43BEC1432D65400D9ECAC /* State2.m */,
+				70A43BEF1432DE0700D9ECAC /* BaseTestState.h */,
+				70A43BF01432DE0700D9ECAC /* BaseTestState.m */,
 			);
 			name = TestStates;
 			sourceTree = "<group>";
@@ -300,6 +306,7 @@
 				70A43BE41432D5AF00D9ECAC /* State.m in Sources */,
 				70A43BE91432D63F00D9ECAC /* State1.m in Sources */,
 				70A43BED1432D65400D9ECAC /* State2.m in Sources */,
+				70A43BF11432DE0700D9ECAC /* BaseTestState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +319,7 @@
 				70A43BE51432D5AF00D9ECAC /* State.m in Sources */,
 				70A43BEA1432D63F00D9ECAC /* State1.m in Sources */,
 				70A43BEE1432D65400D9ECAC /* State2.m in Sources */,
+				70A43BF21432DE0700D9ECAC /* BaseTestState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +370,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -376,6 +385,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -393,7 +403,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StateMachine/StateMachine-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "StateMachine/StateMachine-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -407,7 +416,6 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StateMachine/StateMachine-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "StateMachine/StateMachine-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;

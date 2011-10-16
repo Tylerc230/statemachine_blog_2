@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "State.h"
+#import "BaseTestState.h"
 
-@interface State2 : State {
-    
+@interface State2 : BaseTestState {
 }
 
+
+- (void)callC;
 @end
