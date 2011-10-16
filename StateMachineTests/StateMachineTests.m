@@ -98,7 +98,7 @@
 {
 	state1_.substate = state2_;
 	stateMachine_.currentState = state1_;
-	//Both state and substate handle the message
+	//Both state and substate handle the message, parent should handle it
 	[stateMachine_ performSelector:@selector(callA)];
 	STAssertFalse([state2_ aCalled], @"Parent state should handle message first. If parent implements method, child implementation should not be called");
 	STAssertTrue([state1_ aCalled], @"Parent state should handle message first. Parent should have handled 'callA'");
