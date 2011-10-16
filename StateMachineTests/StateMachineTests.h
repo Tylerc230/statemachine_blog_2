@@ -15,7 +15,7 @@
 @interface StateMachineTests : SenTestCase {
 @private
 	StateMachine * stateMachine_;
-    State1 * state1_;
+	State1 * state1_;
 	State2 * state2_;
 }
 

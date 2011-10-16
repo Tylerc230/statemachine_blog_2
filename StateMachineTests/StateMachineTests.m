@@ -13,7 +13,7 @@
 
 - (void)setUp
 {
-    [super setUp];
+	[super setUp];
 	stateMachine_ = [[StateMachine alloc] init];
 	state1_ = [[State1 alloc] init];
 	state2_ = [[State2 alloc] init];
@@ -24,9 +24,10 @@
 	[state1_ release];
 	[state2_ release];
 	[stateMachine_ release];
-    [super tearDown];
+	[super tearDown];
 }
 
+#pragma Test Lifecycle (activate/deactive) methods
 - (void)testActivateDeactivateMethod
 {
 	stateMachine_.currentState = state1_;
@@ -44,8 +45,9 @@
 	STAssertTrue([state2_ deactivateCalled], @"Substate deactivate not called");
 }
 
-#pragma Test Lifecycle (activate/deactive) methods
-
+/* It is valid to set the sub state on a state first, and then assign it as the current state. 
+   It is also valid to set the current state of the state machine first, then set its substate.
+   We must make sure the lifecycle and initialization work in both scenarios */
 - (void)lifecycleMethodTest:(NSString *)testName
 {
 	STAssertTrue([state1_ activateCalled], @"Test: %@ Parent state activate should be called", testName);
@@ -90,7 +92,8 @@
 	[self stateMachineSetTest:@"Current state first"];
 }
 
-/* Basic message passing test */
+
+#pragma  Test Basic message passing
 - (void)testCorrectStateMethodCall
 {
 	state1_.substate = state2_;
