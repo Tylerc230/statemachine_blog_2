@@ -21,6 +21,11 @@
 @property (nonatomic, readonly) BOOL aCalled;
 @property (nonatomic, readonly) BOOL bCalled;
 @property (nonatomic, readonly) BOOL cCalled;
+- (BOOL)touchBeganCalled;
+- (BOOL)touchMovedCalled;
+- (BOOL)touchEndedCalled;
+- (BOOL)touchCancelledCalled;
+
 @property (nonatomic, readonly) BOOL stateMachineSet;
 
 - (void)callA;

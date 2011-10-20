@@ -62,6 +62,27 @@
 	return [methodsCalled_ containsObject:@"callC"];
 }
 
+- (BOOL)touchBeganCalled
+{
+	return  [methodsCalled_ containsObject:@"touchesBegan:withEvent:"];
+}
+
+- (BOOL)touchMovedCalled
+{
+	return  [methodsCalled_ containsObject:@"touchesMoved:withEvent:"];
+}
+
+- (BOOL)touchEndedCalled
+{
+	return  [methodsCalled_ containsObject:@"touchesEnded:withEvent:"];
+}
+
+- (BOOL)touchCancelledCalled
+{
+	return  [methodsCalled_ containsObject:@"touchesCancelled:withEvent:"];
+}
+
+
 - (BOOL)stateMachineSet
 {
 	return self.stateMachine != nil;

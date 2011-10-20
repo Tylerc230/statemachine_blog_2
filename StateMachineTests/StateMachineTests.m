@@ -94,7 +94,7 @@
 
 
 #pragma  Test Basic message passing
-- (void)testCorrectStateMethodCall
+- (void)testCorrectStateMessagePassing
 {
 	state1_.substate = state2_;
 	stateMachine_.currentState = state1_;
@@ -115,7 +115,6 @@
 	//There is currently a bug preventing try catch block from catching "unrecognized selector sent to instance" exceptions
 	//STAssertThrows([stateMachine_ performSelector:@selector(callD)], @"State machine silently handled method no state implments");
 }
-
 
 
 @end

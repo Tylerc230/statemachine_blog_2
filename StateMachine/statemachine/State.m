@@ -47,6 +47,26 @@
 	[self.substate deactivate];
 }
 
+- (BOOL)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	return [self.substate touchesBegan:touches withEvent:event];
+}
+
+- (BOOL)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	return [self.substate touchesMoved:touches withEvent:event];
+}
+
+- (BOOL)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	return [self.substate touchesEnded:touches withEvent:event];
+}
+
+- (BOOL)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	return [self.substate touchesCancelled:touches withEvent:event];
+}
+
 - (id)forwardingTargetForSelector:(SEL)aSelector
 {
 	return self.substate;

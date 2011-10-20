@@ -17,11 +17,9 @@
 		70A43BEE1432D65400D9ECAC /* State2.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BEC1432D65400D9ECAC /* State2.m */; };
 		70A43BF11432DE0700D9ECAC /* BaseTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BF01432DE0700D9ECAC /* BaseTestState.m */; };
 		70A43BF21432DE0700D9ECAC /* BaseTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BF01432DE0700D9ECAC /* BaseTestState.m */; };
-		70C3BFFC144A84360029B3E7 /* ResponderStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C3BFFB144A84360029B3E7 /* ResponderStateMachine.m */; };
-		70C3BFFD144A84360029B3E7 /* ResponderStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C3BFFB144A84360029B3E7 /* ResponderStateMachine.m */; };
-		70C3C000144A84580029B3E7 /* ResponderState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C3BFFF144A84580029B3E7 /* ResponderState.m */; };
-		70C3C001144A84580029B3E7 /* ResponderState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C3BFFF144A84580029B3E7 /* ResponderState.m */; };
-		70C3C005144A84B20029B3E7 /* ResponderStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C3C003144A84B20029B3E7 /* ResponderStateMachineTests.m */; };
+		70DF39B3144FC5EB002EA861 /* ResponderState1.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DF39B1144FC5EB002EA861 /* ResponderState1.m */; };
+		70DF39B7144FC623002EA861 /* ResponderState2.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DF39B5144FC623002EA861 /* ResponderState2.m */; };
+		70DF39BB144FC6C2002EA861 /* ResponderStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DF39B9144FC6C2002EA861 /* ResponderStateMachineTests.m */; };
 		70FCBD1C1432CBEE00D88593 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FCBD1B1432CBEE00D88593 /* UIKit.framework */; };
 		70FCBD1E1432CBEE00D88593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FCBD1D1432CBEE00D88593 /* Foundation.framework */; };
 		70FCBD201432CBEE00D88593 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FCBD1F1432CBEE00D88593 /* CoreGraphics.framework */; };
@@ -58,12 +56,12 @@
 		70A43BEC1432D65400D9ECAC /* State2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = State2.m; path = test_states/State2.m; sourceTree = "<group>"; };
 		70A43BEF1432DE0700D9ECAC /* BaseTestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTestState.h; path = test_states/BaseTestState.h; sourceTree = "<group>"; };
 		70A43BF01432DE0700D9ECAC /* BaseTestState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTestState.m; path = test_states/BaseTestState.m; sourceTree = "<group>"; };
-		70C3BFFA144A84360029B3E7 /* ResponderStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponderStateMachine.h; path = responder_statemachine/ResponderStateMachine.h; sourceTree = "<group>"; };
-		70C3BFFB144A84360029B3E7 /* ResponderStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponderStateMachine.m; path = responder_statemachine/ResponderStateMachine.m; sourceTree = "<group>"; };
-		70C3BFFE144A84580029B3E7 /* ResponderState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponderState.h; path = responder_statemachine/ResponderState.h; sourceTree = "<group>"; };
-		70C3BFFF144A84580029B3E7 /* ResponderState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponderState.m; path = responder_statemachine/ResponderState.m; sourceTree = "<group>"; };
-		70C3C002144A84B20029B3E7 /* ResponderStateMachineTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderStateMachineTests.h; sourceTree = "<group>"; };
-		70C3C003144A84B20029B3E7 /* ResponderStateMachineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderStateMachineTests.m; sourceTree = "<group>"; };
+		70DF39B0144FC5EB002EA861 /* ResponderState1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponderState1.h; path = test_states/ResponderState1.h; sourceTree = "<group>"; };
+		70DF39B1144FC5EB002EA861 /* ResponderState1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponderState1.m; path = test_states/ResponderState1.m; sourceTree = "<group>"; };
+		70DF39B4144FC623002EA861 /* ResponderState2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponderState2.h; path = test_states/ResponderState2.h; sourceTree = "<group>"; };
+		70DF39B5144FC623002EA861 /* ResponderState2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponderState2.m; path = test_states/ResponderState2.m; sourceTree = "<group>"; };
+		70DF39B8144FC6C2002EA861 /* ResponderStateMachineTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponderStateMachineTests.h; sourceTree = "<group>"; };
+		70DF39B9144FC6C2002EA861 /* ResponderStateMachineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderStateMachineTests.m; sourceTree = "<group>"; };
 		70FCBD171432CBEE00D88593 /* StateMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FCBD1B1432CBEE00D88593 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		70FCBD1D1432CBEE00D88593 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,25 +119,18 @@
 		70A43BE61432D5FD00D9ECAC /* TestStates */ = {
 			isa = PBXGroup;
 			children = (
+				70A43BEF1432DE0700D9ECAC /* BaseTestState.h */,
+				70A43BF01432DE0700D9ECAC /* BaseTestState.m */,
 				70A43BE71432D63F00D9ECAC /* State1.h */,
 				70A43BE81432D63F00D9ECAC /* State1.m */,
 				70A43BEB1432D65400D9ECAC /* State2.h */,
 				70A43BEC1432D65400D9ECAC /* State2.m */,
-				70A43BEF1432DE0700D9ECAC /* BaseTestState.h */,
-				70A43BF01432DE0700D9ECAC /* BaseTestState.m */,
+				70DF39B0144FC5EB002EA861 /* ResponderState1.h */,
+				70DF39B1144FC5EB002EA861 /* ResponderState1.m */,
+				70DF39B4144FC623002EA861 /* ResponderState2.h */,
+				70DF39B5144FC623002EA861 /* ResponderState2.m */,
 			);
 			name = TestStates;
-			sourceTree = "<group>";
-		};
-		70C3BFF9144A84210029B3E7 /* ResponderStateMachine */ = {
-			isa = PBXGroup;
-			children = (
-				70C3BFFA144A84360029B3E7 /* ResponderStateMachine.h */,
-				70C3BFFB144A84360029B3E7 /* ResponderStateMachine.m */,
-				70C3BFFE144A84580029B3E7 /* ResponderState.h */,
-				70C3BFFF144A84580029B3E7 /* ResponderState.m */,
-			);
-			name = ResponderStateMachine;
 			sourceTree = "<group>";
 		};
 		70FCBD0C1432CBEE00D88593 = {
@@ -174,7 +165,6 @@
 		70FCBD211432CBEE00D88593 /* StateMachine */ = {
 			isa = PBXGroup;
 			children = (
-				70C3BFF9144A84210029B3E7 /* ResponderStateMachine */,
 				70A43BDD1432D52400D9ECAC /* StateMachine */,
 				70FCBD2A1432CBEE00D88593 /* StateMachineAppDelegate.h */,
 				70FCBD2B1432CBEE00D88593 /* StateMachineAppDelegate.m */,
@@ -201,8 +191,8 @@
 				70A43BE61432D5FD00D9ECAC /* TestStates */,
 				70FCBD421432CBEE00D88593 /* StateMachineTests.h */,
 				70FCBD441432CBEE00D88593 /* StateMachineTests.m */,
-				70C3C002144A84B20029B3E7 /* ResponderStateMachineTests.h */,
-				70C3C003144A84B20029B3E7 /* ResponderStateMachineTests.m */,
+				70DF39B8144FC6C2002EA861 /* ResponderStateMachineTests.h */,
+				70DF39B9144FC6C2002EA861 /* ResponderStateMachineTests.m */,
 				70FCBD3C1432CBEE00D88593 /* Supporting Files */,
 			);
 			path = StateMachineTests;
@@ -333,8 +323,6 @@
 				70A43BE91432D63F00D9ECAC /* State1.m in Sources */,
 				70A43BED1432D65400D9ECAC /* State2.m in Sources */,
 				70A43BF11432DE0700D9ECAC /* BaseTestState.m in Sources */,
-				70C3BFFC144A84360029B3E7 /* ResponderStateMachine.m in Sources */,
-				70C3C000144A84580029B3E7 /* ResponderState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,9 +336,9 @@
 				70A43BEA1432D63F00D9ECAC /* State1.m in Sources */,
 				70A43BEE1432D65400D9ECAC /* State2.m in Sources */,
 				70A43BF21432DE0700D9ECAC /* BaseTestState.m in Sources */,
-				70C3BFFD144A84360029B3E7 /* ResponderStateMachine.m in Sources */,
-				70C3C001144A84580029B3E7 /* ResponderState.m in Sources */,
-				70C3C005144A84B20029B3E7 /* ResponderStateMachineTests.m in Sources */,
+				70DF39B3144FC5EB002EA861 /* ResponderState1.m in Sources */,
+				70DF39B7144FC623002EA861 /* ResponderState2.m in Sources */,
+				70DF39BB144FC6C2002EA861 /* ResponderStateMachineTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

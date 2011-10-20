@@ -19,4 +19,9 @@
 
 - (void)activate;
 - (void)deactivate;
+- (BOOL)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+- (BOOL)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+- (BOOL)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+- (BOOL)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
+
 @end
