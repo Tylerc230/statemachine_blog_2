@@ -9,5 +9,5 @@
 #import "State.h"
 
 @interface NullState : State
-
++ (NullState *)nullState;
 @end

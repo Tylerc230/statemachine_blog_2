@@ -35,21 +35,23 @@
 	{
 		return;
 	}
-	if(substate == nil)
-	{
-		substate = [[[NullState alloc] init] autorelease];
-	}
 	[self removeTopState];
 	[self pushState:substate];
 }
 
 - (State *)substate
 {
-	if(self.stateStack.count > 0)
+	if(self.stateStack.count == 0)
 	{
-		return [self.stateStack lastObject];
+		return nil;
 	}
-	return nil;
+	State * currentState = [self.stateStack lastObject];
+	if(currentState == [NullState nullState])
+	{
+		return nil;
+	}
+	return currentState;
+
 }
 
 - (void)setStateMachine:(StateMachine *)stateMachine
@@ -65,9 +67,10 @@
 
 - (void)pushState:(State *)state
 {
-	if(self.stateStack.count > 0)
+	[self.substate deactivate];
+	if(state == nil)
 	{
-		[self.substate deactivate];
+		state = [NullState nullState];
 	}
 	state.stateMachine = self.stateMachine;
 	[state activate];
@@ -78,10 +81,8 @@
 - (void)popState
 {
 	[self removeTopState];
-	if(self.stateStack.count > 0)
-	{
-		[self.substate activate];
-	}
+	[self.substate activate];
+
 }
 
 - (void)removeTopState
@@ -89,7 +90,7 @@
 	if(self.stateStack.count > 0)
 	{
 		[self.substate deactivate];
-		[self.stateStack removeObject:self.substate];
+		[self.stateStack removeObject:self.stateStack.lastObject];
 	}
 }
 
