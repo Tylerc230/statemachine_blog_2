@@ -12,13 +12,14 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "StateMachine.h"
 #import "State1.h"
-#import "State2.h"
-
 
 @interface StateStackTests : SenTestCase
 {
 	StateMachine * stateMachine_;
 	State1 * state1_;
-	State2 * state2_;
+	State1 * state2_;
+	State1 * state3_;
+	State1 * state4_;
+
 }
 @end

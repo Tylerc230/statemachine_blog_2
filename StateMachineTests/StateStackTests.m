@@ -7,13 +7,17 @@
 //
 
 #import "StateStackTests.h"
+#import "NullState.h"
 
 @implementation StateStackTests
 - (void)setUp
 {
 	[super setUp];
 	state1_ = [[State1 alloc] init];
-	state2_ = [[State2 alloc] init];
+	state2_ = [[State1 alloc] init];
+	state3_ = [[State1 alloc] init];
+	state4_ = [[State1 alloc] init];
+
 	stateMachine_ = [[StateMachine alloc] init];
 }
 
@@ -53,6 +57,25 @@
 	[state1_ setSubstate:nil];
 	[stateMachine_ performSelector:@selector(callB)];
 	STAssertTrue([state1_ bCalled], @"If we set substate to nil, parent state should handle message");
+}
+
+- (void)testNullExistance
+{
+	STAssertNotNil([NullState nullState], @"Null state singleton should exist");
+}
+
+- (void)testStackMessagePassing
+{
+	state1_.substate = state2_;
+	state3_.substate = state4_;
+	stateMachine_.currentState = state1_;
+	[stateMachine_ pushState:state3_];
+	[stateMachine_ performSelector:@selector(callB)];
+	STAssertTrue([state3_ bCalled], @"State on top of stack should handle message");
+	STAssertFalse([state1_ bCalled], @"State below top state should not handle message");
+	[stateMachine_ popState];
+	[stateMachine_ performSelector:@selector(callB)];
+	STAssertTrue([state1_ bCalled], @"Once top is popped, next state should handle messages");
 }
 
 
