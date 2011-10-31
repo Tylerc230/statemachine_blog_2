@@ -39,9 +39,20 @@
 	STAssertNil(stateMachine_.currentState, @"Popping beyond last state should return nil for current state");
 }
 
-- (void)testNullMessagePassing
+- (void)testNullSubstateMessagePassing
 {
-	
+	[stateMachine_ pushState:state1_];
+	[state1_ pushState:nil];
+	[stateMachine_ performSelector:@selector(callB)];
+	STAssertTrue([state1_ bCalled], @"If we push nil to a state, it should handle the call itself.");
+}
+
+- (void)testSetCurrentNullMessagePassing
+{
+	[stateMachine_ setCurrentState:state1_];
+	[state1_ setSubstate:nil];
+	[stateMachine_ performSelector:@selector(callB)];
+	STAssertTrue([state1_ bCalled], @"If we set substate to nil, parent state should handle message");
 }
 
 
