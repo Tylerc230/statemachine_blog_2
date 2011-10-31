@@ -10,15 +10,19 @@
 
 @class StateMachine;
 @interface State : NSObject {
-	State *	substate_;
+	NSMutableArray * stateStack_;
 	StateMachine * stateMachine_;
 }
 @property (nonatomic, retain) State * substate;
 /* Using assign to avoid circular retains */
 @property (nonatomic, assign) StateMachine * stateMachine;
+//TODO: move to private category
+@property (nonatomic, retain) NSMutableArray * stateStack;
 
 - (void)activate;
 - (void)deactivate;
+- (void)pushState:(State *)state;
+- (void)popState;
 - (BOOL)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (BOOL)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 - (BOOL)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;

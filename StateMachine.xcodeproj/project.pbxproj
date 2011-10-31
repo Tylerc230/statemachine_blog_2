@@ -17,6 +17,8 @@
 		70A43BEE1432D65400D9ECAC /* State2.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BEC1432D65400D9ECAC /* State2.m */; };
 		70A43BF11432DE0700D9ECAC /* BaseTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BF01432DE0700D9ECAC /* BaseTestState.m */; };
 		70A43BF21432DE0700D9ECAC /* BaseTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BF01432DE0700D9ECAC /* BaseTestState.m */; };
+		70BF9AAE145F2D8400A038A4 /* NullState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF9AAD145F2D8400A038A4 /* NullState.m */; };
+		70BF9AAF145F2D8400A038A4 /* NullState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF9AAD145F2D8400A038A4 /* NullState.m */; };
 		70DF39B3144FC5EB002EA861 /* ResponderState1.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DF39B1144FC5EB002EA861 /* ResponderState1.m */; };
 		70DF39B7144FC623002EA861 /* ResponderState2.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DF39B5144FC623002EA861 /* ResponderState2.m */; };
 		70DF39BB144FC6C2002EA861 /* ResponderStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DF39B9144FC6C2002EA861 /* ResponderStateMachineTests.m */; };
@@ -56,6 +58,8 @@
 		70A43BEC1432D65400D9ECAC /* State2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = State2.m; path = test_states/State2.m; sourceTree = "<group>"; };
 		70A43BEF1432DE0700D9ECAC /* BaseTestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTestState.h; path = test_states/BaseTestState.h; sourceTree = "<group>"; };
 		70A43BF01432DE0700D9ECAC /* BaseTestState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTestState.m; path = test_states/BaseTestState.m; sourceTree = "<group>"; };
+		70BF9AAC145F2D8400A038A4 /* NullState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NullState.h; path = statemachine/NullState.h; sourceTree = "<group>"; };
+		70BF9AAD145F2D8400A038A4 /* NullState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NullState.m; path = statemachine/NullState.m; sourceTree = "<group>"; };
 		70DF39B0144FC5EB002EA861 /* ResponderState1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponderState1.h; path = test_states/ResponderState1.h; sourceTree = "<group>"; };
 		70DF39B1144FC5EB002EA861 /* ResponderState1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponderState1.m; path = test_states/ResponderState1.m; sourceTree = "<group>"; };
 		70DF39B4144FC623002EA861 /* ResponderState2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponderState2.h; path = test_states/ResponderState2.h; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				70A43BDF1432D59400D9ECAC /* StateMachine.m */,
 				70A43BE21432D5AF00D9ECAC /* State.h */,
 				70A43BE31432D5AF00D9ECAC /* State.m */,
+				70BF9AAC145F2D8400A038A4 /* NullState.h */,
+				70BF9AAD145F2D8400A038A4 /* NullState.m */,
 			);
 			name = StateMachine;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 				70A43BE91432D63F00D9ECAC /* State1.m in Sources */,
 				70A43BED1432D65400D9ECAC /* State2.m in Sources */,
 				70A43BF11432DE0700D9ECAC /* BaseTestState.m in Sources */,
+				70BF9AAE145F2D8400A038A4 /* NullState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +346,7 @@
 				70DF39B3144FC5EB002EA861 /* ResponderState1.m in Sources */,
 				70DF39B7144FC623002EA861 /* ResponderState2.m in Sources */,
 				70DF39BB144FC6C2002EA861 /* ResponderStateMachineTests.m in Sources */,
+				70BF9AAF145F2D8400A038A4 /* NullState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

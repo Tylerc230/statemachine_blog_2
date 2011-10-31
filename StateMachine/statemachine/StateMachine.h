@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "State.h"
 
-@interface StateMachine : NSObject {
-    State *	currentState_;
+@interface StateMachine : State {
+
 }
 @property (nonatomic, retain) State * currentState;
 

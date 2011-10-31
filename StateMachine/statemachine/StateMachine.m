@@ -14,21 +14,13 @@
 
 - (void)setCurrentState:(State *)currentState
 {
-	if(currentState == currentState_)
-	{
-		return;
-	}
-	[self.currentState deactivate];
-	[self.currentState release];
-	
-	currentState_ = [currentState retain];
-	self.currentState.stateMachine = self;
-	[currentState_ activate];
+	self.substate = currentState;
+	self.substate.stateMachine = self;
 }
 
-- (id)forwardingTargetForSelector:(SEL)aSelector
+- (State *)currentState
 {
-	return self.currentState;
+	return self.substate;
 }
 
 @end

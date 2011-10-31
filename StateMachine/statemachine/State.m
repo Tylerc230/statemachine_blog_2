@@ -8,22 +8,48 @@
 
 #import "State.h"
 #import "StateMachine.h"
+#import "NullState.h"
+
+@interface State (Private)
+- (void)removeTopState;
+@end
 
 @implementation State
-@synthesize substate = substate_;
+@dynamic substate;
 @synthesize stateMachine = stateMachine_;
+@synthesize stateStack = stateStack_;
+
+- (id)init
+{
+	if(self = [super init])
+	{
+		self.stateStack = [NSMutableArray arrayWithCapacity:10];
+	}
+	return self;
+}
 
 - (void)setSubstate:(State *)substate
 {
-	if(substate_ == substate)
+	State * currentState = self.substate;
+	if(currentState == substate)
 	{
 		return;
 	}
-	[self.substate deactivate];
-	[self.substate release];
-	substate_ = [substate retain];
-	self.substate.stateMachine = self.stateMachine;
-	[self.substate activate];
+	if(substate == nil)
+	{
+		substate = [[[NullState alloc] init] autorelease];
+	}
+	[self removeTopState];
+	[self pushState:substate];
+}
+
+- (State *)substate
+{
+	if(self.stateStack.count > 0)
+	{
+		return [self.stateStack lastObject];
+	}
+	return nil;
 }
 
 - (void)setStateMachine:(StateMachine *)stateMachine
@@ -32,9 +58,39 @@
 	{
 		return;
 	}
-	[self.stateMachine release];
-	stateMachine_ = [stateMachine retain];
+
+	stateMachine_ = stateMachine;
 	self.substate.stateMachine = stateMachine;
+}
+
+- (void)pushState:(State *)state
+{
+	if(self.stateStack.count > 0)
+	{
+		[self.substate deactivate];
+	}
+	state.stateMachine = self.stateMachine;
+	[state activate];
+	[self.stateStack addObject:state];
+	
+}
+
+- (void)popState
+{
+	[self removeTopState];
+	if(self.stateStack.count > 0)
+	{
+		[self.substate activate];
+	}
+}
+
+- (void)removeTopState
+{
+	if(self.stateStack.count > 0)
+	{
+		[self.substate deactivate];
+		[self.stateStack removeObject:self.substate];
+	}
 }
 
 - (void)activate
