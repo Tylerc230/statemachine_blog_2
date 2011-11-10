@@ -3,7 +3,7 @@
 //  StateMachine
 //
 //  Created by Tyler Casselman on 9/27/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 sfsoftwareist. All rights reserved.
 //
 
 #import "StateMachineAppDelegate.h"
@@ -16,6 +16,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Override point for customization after application launch.
+	exampleAppViewController_ = [[ExampleAppViewController alloc] init];
+	[self.window addSubview:exampleAppViewController_.view];
 	[self.window makeKeyAndVisible];
 	return YES;
 }
@@ -61,6 +63,7 @@
 
 - (void)dealloc
 {
+	[exampleAppViewController_ release], exampleAppViewController_ = nil;
 	[_window release];
 	[super dealloc];
 }

@@ -17,9 +17,17 @@
 		70A43BEE1432D65400D9ECAC /* State2.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BEC1432D65400D9ECAC /* State2.m */; };
 		70A43BF11432DE0700D9ECAC /* BaseTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BF01432DE0700D9ECAC /* BaseTestState.m */; };
 		70A43BF21432DE0700D9ECAC /* BaseTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A43BF01432DE0700D9ECAC /* BaseTestState.m */; };
+		70B2C1D4146B9DF3003CFCF2 /* EditState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B2C1D3146B9DF3003CFCF2 /* EditState.m */; };
+		70B2C1D7146B9E14003CFCF2 /* ScrollState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B2C1D6146B9E14003CFCF2 /* ScrollState.m */; };
+		70B2C1DA146B9E3C003CFCF2 /* GamePlayState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B2C1D9146B9E3C003CFCF2 /* GamePlayState.m */; };
+		70B2C1DD146BA379003CFCF2 /* BaseExampleState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B2C1DC146BA379003CFCF2 /* BaseExampleState.m */; };
 		70BF9AAE145F2D8400A038A4 /* NullState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF9AAD145F2D8400A038A4 /* NullState.m */; };
 		70BF9AAF145F2D8400A038A4 /* NullState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF9AAD145F2D8400A038A4 /* NullState.m */; };
 		70BF9ABF145F4A1600A038A4 /* StateStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF9ABE145F4A1600A038A4 /* StateStackTests.m */; };
+		70BF9ACA146B94E100A038A4 /* ExampleAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF9AC8146B94E100A038A4 /* ExampleAppViewController.m */; };
+		70BF9ACB146B94E100A038A4 /* ExampleAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70BF9AC9146B94E100A038A4 /* ExampleAppViewController.xib */; };
+		70BF9ACD146B979900A038A4 /* checkered_pattern.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70BF9ACC146B979900A038A4 /* checkered_pattern.jpg */; };
+		70BF9ACF146B990A00A038A4 /* cow_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70BF9ACE146B990A00A038A4 /* cow_image.jpg */; };
 		70DF39B3144FC5EB002EA861 /* ResponderState1.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DF39B1144FC5EB002EA861 /* ResponderState1.m */; };
 		70DF39B7144FC623002EA861 /* ResponderState2.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DF39B5144FC623002EA861 /* ResponderState2.m */; };
 		70DF39BB144FC6C2002EA861 /* ResponderStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DF39B9144FC6C2002EA861 /* ResponderStateMachineTests.m */; };
@@ -59,10 +67,23 @@
 		70A43BEC1432D65400D9ECAC /* State2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = State2.m; path = test_states/State2.m; sourceTree = "<group>"; };
 		70A43BEF1432DE0700D9ECAC /* BaseTestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTestState.h; path = test_states/BaseTestState.h; sourceTree = "<group>"; };
 		70A43BF01432DE0700D9ECAC /* BaseTestState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTestState.m; path = test_states/BaseTestState.m; sourceTree = "<group>"; };
+		70B2C1D2146B9DF3003CFCF2 /* EditState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditState.h; path = example_app/example_states/EditState.h; sourceTree = "<group>"; };
+		70B2C1D3146B9DF3003CFCF2 /* EditState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditState.m; path = example_app/example_states/EditState.m; sourceTree = "<group>"; };
+		70B2C1D5146B9E14003CFCF2 /* ScrollState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollState.h; path = example_app/example_states/ScrollState.h; sourceTree = "<group>"; };
+		70B2C1D6146B9E14003CFCF2 /* ScrollState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollState.m; path = example_app/example_states/ScrollState.m; sourceTree = "<group>"; };
+		70B2C1D8146B9E3C003CFCF2 /* GamePlayState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayState.h; path = example_app/example_states/GamePlayState.h; sourceTree = "<group>"; };
+		70B2C1D9146B9E3C003CFCF2 /* GamePlayState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePlayState.m; path = example_app/example_states/GamePlayState.m; sourceTree = "<group>"; };
+		70B2C1DB146BA379003CFCF2 /* BaseExampleState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseExampleState.h; path = example_app/example_states/BaseExampleState.h; sourceTree = "<group>"; };
+		70B2C1DC146BA379003CFCF2 /* BaseExampleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseExampleState.m; path = example_app/example_states/BaseExampleState.m; sourceTree = "<group>"; };
 		70BF9AAC145F2D8400A038A4 /* NullState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NullState.h; path = statemachine/NullState.h; sourceTree = "<group>"; };
 		70BF9AAD145F2D8400A038A4 /* NullState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NullState.m; path = statemachine/NullState.m; sourceTree = "<group>"; };
 		70BF9ABD145F4A1600A038A4 /* StateStackTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateStackTests.h; sourceTree = "<group>"; };
 		70BF9ABE145F4A1600A038A4 /* StateStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateStackTests.m; sourceTree = "<group>"; };
+		70BF9AC7146B94E100A038A4 /* ExampleAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleAppViewController.h; path = example_app/ExampleAppViewController.h; sourceTree = "<group>"; };
+		70BF9AC8146B94E100A038A4 /* ExampleAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleAppViewController.m; path = example_app/ExampleAppViewController.m; sourceTree = "<group>"; };
+		70BF9AC9146B94E100A038A4 /* ExampleAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExampleAppViewController.xib; path = example_app/ExampleAppViewController.xib; sourceTree = "<group>"; };
+		70BF9ACC146B979900A038A4 /* checkered_pattern.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkered_pattern.jpg; sourceTree = "<group>"; };
+		70BF9ACE146B990A00A038A4 /* cow_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cow_image.jpg; sourceTree = "<group>"; };
 		70DF39B0144FC5EB002EA861 /* ResponderState1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponderState1.h; path = test_states/ResponderState1.h; sourceTree = "<group>"; };
 		70DF39B1144FC5EB002EA861 /* ResponderState1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponderState1.m; path = test_states/ResponderState1.m; sourceTree = "<group>"; };
 		70DF39B4144FC623002EA861 /* ResponderState2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponderState2.h; path = test_states/ResponderState2.h; sourceTree = "<group>"; };
@@ -142,9 +163,36 @@
 			name = TestStates;
 			sourceTree = "<group>";
 		};
+		70B2C1D0146B9D9D003CFCF2 /* ExampleStates */ = {
+			isa = PBXGroup;
+			children = (
+				70B2C1DB146BA379003CFCF2 /* BaseExampleState.h */,
+				70B2C1DC146BA379003CFCF2 /* BaseExampleState.m */,
+				70B2C1D2146B9DF3003CFCF2 /* EditState.h */,
+				70B2C1D3146B9DF3003CFCF2 /* EditState.m */,
+				70B2C1D5146B9E14003CFCF2 /* ScrollState.h */,
+				70B2C1D6146B9E14003CFCF2 /* ScrollState.m */,
+				70B2C1D8146B9E3C003CFCF2 /* GamePlayState.h */,
+				70B2C1D9146B9E3C003CFCF2 /* GamePlayState.m */,
+			);
+			name = ExampleStates;
+			sourceTree = "<group>";
+		};
+		70BF9AC5146B940A00A038A4 /* ExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				70B2C1D0146B9D9D003CFCF2 /* ExampleStates */,
+				70BF9AC7146B94E100A038A4 /* ExampleAppViewController.h */,
+				70BF9AC8146B94E100A038A4 /* ExampleAppViewController.m */,
+				70BF9AC9146B94E100A038A4 /* ExampleAppViewController.xib */,
+			);
+			name = ExampleApp;
+			sourceTree = "<group>";
+		};
 		70FCBD0C1432CBEE00D88593 = {
 			isa = PBXGroup;
 			children = (
+				70BF9ACE146B990A00A038A4 /* cow_image.jpg */,
 				70FCBD211432CBEE00D88593 /* StateMachine */,
 				70FCBD3B1432CBEE00D88593 /* StateMachineTests */,
 				70FCBD1A1432CBEE00D88593 /* Frameworks */,
@@ -174,6 +222,8 @@
 		70FCBD211432CBEE00D88593 /* StateMachine */ = {
 			isa = PBXGroup;
 			children = (
+				70BF9ACC146B979900A038A4 /* checkered_pattern.jpg */,
+				70BF9AC5146B940A00A038A4 /* ExampleApp */,
 				70A43BDD1432D52400D9ECAC /* StateMachine */,
 				70FCBD2A1432CBEE00D88593 /* StateMachineAppDelegate.h */,
 				70FCBD2B1432CBEE00D88593 /* StateMachineAppDelegate.m */,
@@ -292,6 +342,9 @@
 			files = (
 				70FCBD261432CBEE00D88593 /* InfoPlist.strings in Resources */,
 				70FCBD2F1432CBEE00D88593 /* MainWindow.xib in Resources */,
+				70BF9ACB146B94E100A038A4 /* ExampleAppViewController.xib in Resources */,
+				70BF9ACD146B979900A038A4 /* checkered_pattern.jpg in Resources */,
+				70BF9ACF146B990A00A038A4 /* cow_image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +388,11 @@
 				70A43BED1432D65400D9ECAC /* State2.m in Sources */,
 				70A43BF11432DE0700D9ECAC /* BaseTestState.m in Sources */,
 				70BF9AAE145F2D8400A038A4 /* NullState.m in Sources */,
+				70BF9ACA146B94E100A038A4 /* ExampleAppViewController.m in Sources */,
+				70B2C1D4146B9DF3003CFCF2 /* EditState.m in Sources */,
+				70B2C1D7146B9E14003CFCF2 /* ScrollState.m in Sources */,
+				70B2C1DA146B9E3C003CFCF2 /* GamePlayState.m in Sources */,
+				70B2C1DD146BA379003CFCF2 /* BaseExampleState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
