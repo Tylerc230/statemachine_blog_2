@@ -30,4 +30,15 @@
 	return YES;
 }
 
+- (void)editButtonTapped
+{
+	
+}
+
+- (void)pushEditState
+{
+	
+}
+
+
 @end
