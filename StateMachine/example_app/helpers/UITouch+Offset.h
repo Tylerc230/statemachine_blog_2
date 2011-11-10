@@ -1,16 +1,15 @@
 //
-//  ScrollState.h
+//  UITouch+UITouch_Offset.h
 //  StateMachine
 //
 //  Created by Tyler Casselman on 11/9/11.
 //  Copyright (c) 2011 sfsoftwareist. All rights reserved.
 //
 
-#import "BaseExampleState.h"
+#import <UIKit/UIKit.h>
 
-@interface ScrollState : BaseExampleState
-{
+@interface UITouch (Offset)
 
-}
-- (void)pushEditState;
+- (CGPoint)offsetInView:(UIView *)view;
+
 @end

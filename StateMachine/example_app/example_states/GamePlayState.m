@@ -10,4 +10,16 @@
 
 @implementation GamePlayState
 
+- (void)activate
+{
+	[super activate];
+	[controller_ showEditButton:YES];
+}
+
+- (void)deactivate
+{
+	[super deactivate];
+	[controller_ showEditButton:NO];
+}
+
 @end

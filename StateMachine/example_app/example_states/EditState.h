@@ -9,5 +9,7 @@
 #import "BaseExampleState.h"
 
 @interface EditState : BaseExampleState
-
+{
+	BOOL draggingCow_;
+}
 @end

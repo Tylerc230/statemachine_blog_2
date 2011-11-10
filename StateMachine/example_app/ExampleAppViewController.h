@@ -2,7 +2,7 @@
 //  ExampleAppViewController.h
 //  StateMachine
 //
-//  Created by Tyler Casselman on 11/9/11.
+//  Created by Tyler ; on 11/9/11.
 //  Copyright (c) 2011 sfsoftwareist. All rights reserved.
 //
 
@@ -24,8 +24,17 @@
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)editButtonTapped:(id)sender;
 
+- (void)startUp;
+
 #pragma Manipulation Methods
 - (void)scrollMapByAmount:(CGPoint) offset;
+- (void)moveCowByAmount:(CGPoint) offset;
+- (void)showEditButton:(BOOL)show;
+- (void)showBackButton:(BOOL)show;
+
+
+#pragma Query Methods
+- (UIView *)getCowForTouch:(UITouch *)touch;
 
 
 @end

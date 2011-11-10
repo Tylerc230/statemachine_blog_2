@@ -20,18 +20,23 @@
     self = [super initWithNibName:@"ExampleAppViewController" bundle:nil];
     if (self) {
 		
-		stateMachine_ = [[StateMachine alloc] init];
-		
-		ScrollState * scrollState = [[ScrollState alloc] initWithController:self];
-		GamePlayState * gamePlayState = [[GamePlayState alloc] initWithController:self];
-		
-		scrollState.substate = gamePlayState;
-		stateMachine_.currentState = scrollState;
-		
-		[scrollState release], scrollState = nil;
-		[gamePlayState release], gamePlayState = nil; 
+	
     }
     return self;
+}
+
+- (void)startUp
+{
+	stateMachine_ = [[StateMachine alloc] init];
+	
+	ScrollState * scrollState = [[ScrollState alloc] initWithController:self];
+	GamePlayState * gamePlayState = [[GamePlayState alloc] initWithController:self];
+	
+	scrollState.substate = gamePlayState;
+	stateMachine_.currentState = scrollState;
+	
+	[scrollState release], scrollState = nil;
+	[gamePlayState release], gamePlayState = nil; 
 }
 
 - (void)dealloc
@@ -75,6 +80,35 @@
 {
 	CGPoint start = self.gameMap.center;
 	self.gameMap.center = CGPointMake(start.x + offset.x, start.y + offset.y);
+}
+
+- (void)moveCowByAmount:(CGPoint) offset
+{
+	CGPoint start = self.myCow.center;
+	self.myCow.center = CGPointMake(start.x + offset.x, start.y + offset.y);
+}
+
+- (void)showBackButton:(BOOL)show
+{
+	self.backButton.hidden = !show;
+}
+
+- (void)showEditButton:(BOOL)show
+{
+	self.editButton.hidden = !show;
+}
+
+#pragma Query Methods
+
+- (UIView *)getCowForTouch:(UITouch *)touch
+{
+	CGPoint touchPoint = [touch locationInView:self.gameMap];
+	UIView * touchedView = [self.gameMap hitTest:touchPoint withEvent:nil];
+	if(touchedView == self.myCow)
+	{
+		return self.myCow;
+	}
+	return nil;
 }
 
 - (void)didReceiveMemoryWarning

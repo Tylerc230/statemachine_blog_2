@@ -19,6 +19,7 @@
 	exampleAppViewController_ = [[ExampleAppViewController alloc] init];
 	[self.window addSubview:exampleAppViewController_.view];
 	[self.window makeKeyAndVisible];
+	[exampleAppViewController_ startUp];
 	return YES;
 }
 

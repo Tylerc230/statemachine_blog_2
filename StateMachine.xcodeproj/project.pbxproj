@@ -21,6 +21,7 @@
 		70B2C1D7146B9E14003CFCF2 /* ScrollState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B2C1D6146B9E14003CFCF2 /* ScrollState.m */; };
 		70B2C1DA146B9E3C003CFCF2 /* GamePlayState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B2C1D9146B9E3C003CFCF2 /* GamePlayState.m */; };
 		70B2C1DD146BA379003CFCF2 /* BaseExampleState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B2C1DC146BA379003CFCF2 /* BaseExampleState.m */; };
+		70B2C1EA146BB1C1003CFCF2 /* UITouch+Offset.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B2C1E9146BB1C1003CFCF2 /* UITouch+Offset.m */; };
 		70BF9AAE145F2D8400A038A4 /* NullState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF9AAD145F2D8400A038A4 /* NullState.m */; };
 		70BF9AAF145F2D8400A038A4 /* NullState.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF9AAD145F2D8400A038A4 /* NullState.m */; };
 		70BF9ABF145F4A1600A038A4 /* StateStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF9ABE145F4A1600A038A4 /* StateStackTests.m */; };
@@ -75,6 +76,8 @@
 		70B2C1D9146B9E3C003CFCF2 /* GamePlayState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamePlayState.m; path = example_app/example_states/GamePlayState.m; sourceTree = "<group>"; };
 		70B2C1DB146BA379003CFCF2 /* BaseExampleState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseExampleState.h; path = example_app/example_states/BaseExampleState.h; sourceTree = "<group>"; };
 		70B2C1DC146BA379003CFCF2 /* BaseExampleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseExampleState.m; path = example_app/example_states/BaseExampleState.m; sourceTree = "<group>"; };
+		70B2C1E8146BB1C1003CFCF2 /* UITouch+Offset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITouch+Offset.h"; path = "example_app/helpers/UITouch+Offset.h"; sourceTree = "<group>"; };
+		70B2C1E9146BB1C1003CFCF2 /* UITouch+Offset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITouch+Offset.m"; path = "example_app/helpers/UITouch+Offset.m"; sourceTree = "<group>"; };
 		70BF9AAC145F2D8400A038A4 /* NullState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NullState.h; path = statemachine/NullState.h; sourceTree = "<group>"; };
 		70BF9AAD145F2D8400A038A4 /* NullState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NullState.m; path = statemachine/NullState.m; sourceTree = "<group>"; };
 		70BF9ABD145F4A1600A038A4 /* StateStackTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateStackTests.h; sourceTree = "<group>"; };
@@ -178,6 +181,15 @@
 			name = ExampleStates;
 			sourceTree = "<group>";
 		};
+		70B2C1E6146BB18E003CFCF2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				70B2C1E8146BB1C1003CFCF2 /* UITouch+Offset.h */,
+				70B2C1E9146BB1C1003CFCF2 /* UITouch+Offset.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		70BF9AC5146B940A00A038A4 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +234,7 @@
 		70FCBD211432CBEE00D88593 /* StateMachine */ = {
 			isa = PBXGroup;
 			children = (
+				70B2C1E6146BB18E003CFCF2 /* Helpers */,
 				70BF9ACC146B979900A038A4 /* checkered_pattern.jpg */,
 				70BF9AC5146B940A00A038A4 /* ExampleApp */,
 				70A43BDD1432D52400D9ECAC /* StateMachine */,
@@ -393,6 +406,7 @@
 				70B2C1D7146B9E14003CFCF2 /* ScrollState.m in Sources */,
 				70B2C1DA146B9E3C003CFCF2 /* GamePlayState.m in Sources */,
 				70B2C1DD146BA379003CFCF2 /* BaseExampleState.m in Sources */,
+				70B2C1EA146BB1C1003CFCF2 /* UITouch+Offset.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
