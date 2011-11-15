@@ -15,6 +15,7 @@
 @synthesize gameMap = gameMap_;
 @synthesize backButton = backButton_;
 @synthesize editButton = editButton_;
+@synthesize modeLabel = modeLabel_;
 - (id)init
 {
     self = [super initWithNibName:@"ExampleAppViewController" bundle:nil];
@@ -46,6 +47,7 @@
 	self.myCow = nil;
 	self.editButton = nil;
 	self.backButton = nil;
+	self.modeLabel = nil;
 }
 #pragma Event handling methods
 
@@ -96,6 +98,11 @@
 - (void)showEditButton:(BOOL)show
 {
 	self.editButton.hidden = !show;
+}
+
+- (void)setLabelText:(NSString *)text
+{
+	self.modeLabel.text = text;
 }
 
 #pragma Query Methods

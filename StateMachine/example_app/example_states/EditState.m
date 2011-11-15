@@ -15,12 +15,14 @@
 {
 	[super activate];
 	[controller_ showBackButton:YES];
+	[controller_ setLabelText:@"Edit Mode"];
 }
 
 - (void)deactivate
 {
 	[super deactivate];
 	[controller_ showBackButton:NO];
+	[controller_ setLabelText:@""];
 }
 
 - (BOOL)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

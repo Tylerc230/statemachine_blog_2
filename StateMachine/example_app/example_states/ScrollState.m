@@ -23,6 +23,11 @@
 	return YES;
 }
 
+- (void)backButtonTapped
+{
+	[self popState];
+}
+
 - (void)editButtonTapped
 {
 	[self pushEditState];
