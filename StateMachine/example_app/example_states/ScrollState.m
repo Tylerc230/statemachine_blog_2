@@ -11,6 +11,15 @@
 
 @implementation ScrollState
 
+- (id)initWithController:(ExampleAppViewController *)controller
+{
+	if((self = [super initWithController:controller]))
+	{
+		scrollOffset_ = CGPointMake(-290, 0);//Starting scroll position of the map
+	}
+	return self;
+}
+
 - (void) activate
 {
 	[super activate];
