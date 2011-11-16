@@ -7,7 +7,7 @@
 //
 
 #import "GamePlayState.h"
-
+#import "EditState.h"
 @implementation GamePlayState
 
 - (void)activate
@@ -21,5 +21,14 @@
 	[super deactivate];
 	[controller_ showEditButton:NO];
 }
+
+- (void)editButtonTapped
+{
+	EditState * editState = [[EditState alloc] initWithController:controller_];
+	[self.stateMachine performSelector:@selector(pushScrollingState:) withObject:editState];
+	[editState release], editState = nil;
+}
+
+
 
 @end

@@ -23,21 +23,14 @@
 	return YES;
 }
 
-- (void)backButtonTapped
+- (void)pushScrollingState:(State *)state
+{
+	[self pushState:state];
+}
+
+- (void)popScrollingState
 {
 	[self popState];
-}
-
-- (void)editButtonTapped
-{
-	[self pushEditState];
-}
-
-- (void)pushEditState
-{
-	EditState * editState = [[EditState alloc] initWithController:controller_];
-	[self pushState:editState];
-	[editState release], editState = nil;	
 }
 
 

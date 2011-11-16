@@ -12,5 +12,6 @@
 {
 
 }
-- (void)pushEditState;
+- (void)pushScrollingState:(State *)state;
+- (void)popScrollingState;
 @end
