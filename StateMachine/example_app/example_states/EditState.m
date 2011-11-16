@@ -25,6 +25,12 @@
 	[controller_ setLabelText:@""];
 }
 
+
+- (void)backButtonTapped
+{
+	[self.stateMachine performSelector:@selector(popScrollingState)];
+}
+
 - (BOOL)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch * touch = [touches anyObject];
