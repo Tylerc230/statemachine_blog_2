@@ -35,6 +35,7 @@
 
 - (void)pushEditState
 {
+	//Push the edit state on to our stack
 	EditState * editState = [[EditState alloc] initWithController:controller_];
 	[self pushState:editState];
 	[editState release], editState = nil;	
