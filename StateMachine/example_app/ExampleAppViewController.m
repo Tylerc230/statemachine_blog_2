@@ -78,10 +78,12 @@
 
 #pragma Manipulation Methods
 
-- (void)scrollMapByAmount:(CGPoint) offset
+- (void)scrollMapToPosition:(CGPoint) mapPosition
 {
-	CGPoint start = self.gameMap.center;
-	self.gameMap.center = CGPointMake(start.x + offset.x, start.y + offset.y);
+	CGRect newFrame = self.gameMap.frame;
+	newFrame.origin = mapPosition;
+	self.gameMap.frame = newFrame;
+
 }
 
 - (void)moveCowByAmount:(CGPoint) offset

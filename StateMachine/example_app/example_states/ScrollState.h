@@ -10,7 +10,7 @@
 
 @interface ScrollState : BaseExampleState
 {
-
+	CGPoint scrollOffset_;
 }
 - (void)pushScrollingState:(State *)state;
 - (void)popScrollingState;

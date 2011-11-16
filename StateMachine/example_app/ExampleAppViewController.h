@@ -29,7 +29,7 @@
 - (void)startUp;
 
 #pragma Manipulation Methods
-- (void)scrollMapByAmount:(CGPoint) offset;
+- (void)scrollMapToPosition:(CGPoint) mapPosition;
 - (void)moveCowByAmount:(CGPoint) offset;
 - (void)showEditButton:(BOOL)show;
 - (void)showBackButton:(BOOL)show;
