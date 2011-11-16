@@ -35,7 +35,12 @@
 	}
 	return YES;
 }
-
+/*
+ * Scroll state doesn't need to know anything about
+ * the type of its substates. We can call these methods
+ * from the substate on the state machine and they 
+ * will propagate down the state chain.
+ */
 - (void)pushScrollingState:(State *)state
 {
 	[self pushState:state];

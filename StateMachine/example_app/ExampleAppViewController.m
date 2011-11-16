@@ -65,7 +65,24 @@
 {
 	[stateMachine_ touchesEnded:touches withEvent:event];
 }
+/*
+ * This message isn't handle by any of our states but since 
+ * its a standard event handling method we can pass it along
+ * without throwing 'unknown selector' exceptions.
+ */
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	[stateMachine_ touchesCancelled:touches withEvent:event];
+}
 
+/*
+ * When the edit button is tapped in the view
+ * it is initially handled here. 'editButtonTapped'
+ * is first sent to the scroll state, which does implement it.
+ * It is then forwared to scroll state's substate: game play state.
+ * If game play state didn't handle this message an exception would
+ * be thrown.
+ */
 - (IBAction)editButtonTapped:(id)sender
 {
 	[stateMachine_ performSelector:@selector(editButtonTapped)];
