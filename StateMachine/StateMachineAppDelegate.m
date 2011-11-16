@@ -17,8 +17,8 @@
 {
 	// Override point for customization after application launch.
 	exampleAppViewController_ = [[ExampleAppViewController alloc] init];
-	[self.window addSubview:exampleAppViewController_.view];
 	[self.window makeKeyAndVisible];
+	self.window.rootViewController = exampleAppViewController_;
 	[exampleAppViewController_ startUp];
 	return YES;
 }
